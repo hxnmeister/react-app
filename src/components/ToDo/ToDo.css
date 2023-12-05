@@ -1,0 +1,22 @@
+.text-primary
+{
+    color: dodgerblue;
+}
+.todo-list
+{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.task
+{
+    display: flex;
+    padding: 2px;
+}
+.task > button
+{
+    margin-left: auto;
+}
+.done
+{
+    text-decoration: line-through;
+}
