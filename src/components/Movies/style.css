@@ -1,0 +1,67 @@
+img
+{
+    width: 200px;
+    height: 300px;
+    border-radius: 15px;
+}
+span
+{
+    text-decoration: underline;
+}
+
+.films-container, .search-movie
+{
+    width: 75vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid palevioletred;
+    background-color: palegoldenrod;
+}
+.films-container
+{
+    justify-content: space-evenly;
+}
+.search-movie
+{
+    border-radius: 20px;
+    justify-content: center;
+}
+.search-movie>button
+{
+    background-color: palevioletred;
+    color: palegoldenrod;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.search-movie>button:hover
+{
+    box-shadow: 3px 3px 2px black;
+}
+.search-movie>input[type="text"]
+{
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.film
+{
+    padding: 5px;
+    background-color: palevioletred;
+    color: palegoldenrod;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease-in-out;
+}
+.film:hover
+{
+    box-shadow: 0px 0px 50px black;
+}
+.film, .films-container
+{
+    border-radius: 20px;
+}
