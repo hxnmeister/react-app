@@ -5,10 +5,13 @@ import ItemToDo from './ItemToDo';
 import toDoItems from './toDoItems';
 import './ToDo.css';
 import { nanoid } from 'nanoid';
+import ProgressToDo from './ProgressToDo';
 
 const ToDoList = () => 
 {
     const [tasks, setTasks] = useState(toDoItems);
+    const [tasksAmount, setTasksAmount] = useState(tasks.length);
+    const [tasksDone, setTasksDone] = useState(tasks.filter( item => item.done === true ).length)
 
     const addTask = (title) => 
     {
@@ -23,11 +26,14 @@ const ToDoList = () =>
         ]
 
         setTasks(newTasks);
-        console.log(newTasks);
+        updateTaskBar(newTasks);
     }
     const removeTask = (id) =>
     {
-        setTasks(tasks.filter( item => item.id !== id ));
+        const newTasks = tasks.filter( item => item.id !== id );
+
+        setTasks(newTasks);
+        updateTaskBar(newTasks);
     }
     const toggleDoneTask = (id) =>
     {
@@ -47,6 +53,13 @@ const ToDoList = () =>
             });
 
         setTasks(newTasks);
+        updateTaskBar(newTasks);
+    }
+
+    const updateTaskBar = (updatedTask) => 
+    {
+        setTasksAmount(updatedTask.length);
+        setTasksDone(updatedTask.filter( item => item.done === true ).length);
     }
 
     return (
@@ -60,6 +73,8 @@ const ToDoList = () =>
             <div>
                 {tasks.map((item) => <ItemToDo item={item} removeTask={removeTask} toggleDoneTask={toggleDoneTask} key={item.id}/>)}
             </div>
+
+            <ProgressToDo tasksAmount={tasksAmount} tasksDone={tasksDone}/>
         </div>
     );
 }
