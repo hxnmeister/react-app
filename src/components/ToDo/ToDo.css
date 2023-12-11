@@ -18,6 +18,12 @@
     color: white;
     margin-left: auto;
     border: none;
+
+    transition: box-shadow 0.3s ease-in-out;
+}
+.task > button:hover
+{
+    box-shadow: 0 0 5px black;
 }
 .done
 {
@@ -36,7 +42,7 @@
 {
     height: 100%;
     width: 0;
-    background-color: yellow;
+    background-color: yellowgreen;
 }
 .progress, .progressBar, .task > button
 {
@@ -47,4 +53,6 @@
     position: absolute;
     bottom: 5px;
     right: 35%;
+    text-decoration: underline;
+    cursor: pointer;
 }

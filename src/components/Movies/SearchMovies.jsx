@@ -1,12 +1,13 @@
 import React from 'react';
 
-const SearchMovies = () => 
+const SearchMovies = ( {sortByName, sortByYear} ) => 
 {
     return (
         <>
             <form action="" className='search-movie'>
                 <input type="text" name="" id=""/>
-                <button>Search by Name</button>
+                <button onClick={sortByName} type='button'>Sort by Title</button>
+                <button onClick={sortByYear} type='button'>Sort by Year</button>
             </form>
         </>
     );

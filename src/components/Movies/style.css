@@ -9,7 +9,7 @@ span
     text-decoration: underline;
 }
 
-.films-container, .search-movie
+.movies-container, .search-movie
 {
     width: 75vw;
     display: flex;
@@ -20,7 +20,7 @@ span
     border: 2px solid palevioletred;
     background-color: palegoldenrod;
 }
-.films-container
+.movies-container
 {
     justify-content: space-evenly;
 }
@@ -29,39 +29,63 @@ span
     border-radius: 20px;
     justify-content: center;
 }
-.search-movie>button
+.search-movie > button
 {
     background-color: palevioletred;
     color: palegoldenrod;
-    padding: 5px;
-    border: none;
     border-radius: 5px;
+    margin-right: 5px;
     transition: box-shadow 0.3s ease-in-out;
 }
-.search-movie>button:hover
+.search-movie > button, .movie-card > button, .display-description
+{
+    padding: 5px;
+    border: none;
+}
+.search-movie > button:hover
 {
     box-shadow: 3px 3px 2px black;
 }
-.search-movie>input[type="text"]
+.search-movie > input[type="text"]
 {
     margin-right: 10px;
     border: none;
     border-radius: 5px;
 }
-.film
+.movie-card
 {
     padding: 5px;
     background-color: palevioletred;
     color: palegoldenrod;
     margin-bottom: 10px;
-    cursor: pointer;
     transition: box-shadow 0.5s ease-in-out;
 }
-.film:hover
+.movie-card:hover
 {
     box-shadow: 0px 0px 50px black;
 }
-.film, .films-container
+.movie-card > button
+{
+    width: 100%;
+
+    cursor: pointer;
+    color: palevioletred;
+    background-color: palegoldenrod;
+}
+.movie-card, .movies-container, .movie-card > button
 {
     border-radius: 20px;
+}
+.hide-description
+{
+    display: none;
+}
+.display-description
+{
+    width: 95%;
+    display: block;
+    margin-top: 10px;
+    resize: none;
+    background-color: palegoldenrod;
+    border-radius: 10px;
 }

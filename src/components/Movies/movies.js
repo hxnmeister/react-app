@@ -1,4 +1,4 @@
-const films = 
+const movies = 
 [
   {
     id: 1,
@@ -42,5 +42,4 @@ const films =
   },
 ];
 
-
-export default films;
+export default movies;
