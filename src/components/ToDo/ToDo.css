@@ -43,6 +43,8 @@
     height: 100%;
     width: 0;
     background-color: yellowgreen;
+
+    transition: width 1s ease-in;
 }
 .progress, .progressBar, .task > button
 {
@@ -55,4 +57,9 @@
     right: 35%;
     text-decoration: underline;
     cursor: pointer;
+}
+.active
+{
+    background-color: green;
+    color: white;
 }
