@@ -13,7 +13,7 @@ const MovieCard = ({ movie }) =>
                 <p>Director: <span>{movie.director}</span></p>
                 <p>Year: <span>{movie.year}</span></p>
                 <button onClick={ () => setIsActive(!isActive) }>Details</button>
-                <textarea cols="10" rows="10" readOnly value={ movie.description } className={ classNames( {'display-description': isActive, 'hide-description': !isActive} ) }></textarea>
+                <textarea cols="22" rows="10" readOnly value={ movie.description } className={ classNames( {'display-description': isActive, 'hide-description': !isActive} ) }></textarea>
             </div>
         </>
     );

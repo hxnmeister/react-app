@@ -17,6 +17,7 @@ const ToDoList = () =>
     };
 
     // const [tasks, setTasks] = useState([]);
+    //dispatch при виклику повертає значення до tasks
     const [tasks, dispatch] = useReducer(toDoReducer, []);
     const [filterOption, setFilterOption] = useState('All');
 
