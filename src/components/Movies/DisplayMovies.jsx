@@ -25,7 +25,7 @@ const DisplayMovies = () =>
         (
             {
                 type: 'fill',
-                payload: JSON.parse(localStorage.getItem('moviesList'))
+                payload: JSON.parse(localStorage.getItem('moviesList')) || []
             }
         );
     }, []);

@@ -1,15 +1,15 @@
 import './App.css';
 import Counter from './components/Counter/Counter';
-import DisplayMovies from './components/Movies/DisplayMovies';
 import ToDoList from './components/ToDo/ToDoList';
+import Header from './components/Header/Header';
+import { Outlet } from 'react-router-dom';
 
 function App() 
 {
   return (
     <>
-      <Counter/>
-      <ToDoList/>
-      <DisplayMovies/>
+      <Header/>
+      <Outlet/>
     </>
   );
 }
