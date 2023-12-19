@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Forma from '../Forma/Forma';
 
 const Counter = () => 
 {
@@ -14,6 +15,8 @@ const Counter = () =>
             <button onClick={ increment }>+</button>
 
             <button onClick={ () => setCount(count + 2) }> +2 </button>
+
+            <Forma/>
         </div>
     );
 }

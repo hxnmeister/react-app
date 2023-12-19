@@ -63,3 +63,8 @@
     background-color: green;
     color: white;
 }
+.dark
+{
+    background: black;
+    color: #fff
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useContext, useEffect, useReducer, useState } from 'react';
 import AddToDo from './AddToDo';
 import FilterToDo from './FilterToDo';
 import ItemToDo from './ItemToDo';
@@ -6,6 +6,8 @@ import './ToDo.css';
 import { nanoid } from 'nanoid';
 import ProgressToDo from './ProgressToDo';
 import toDoReducer from '../../reducers/toDoReducer';
+import classNames from 'classnames';
+import { themeContext } from '../../contexts/themeContext';
 
 const ToDoList = () => 
 {
@@ -18,6 +20,7 @@ const ToDoList = () =>
 
     // const [tasks, setTasks] = useState([]);
     //dispatch при виклику повертає значення до tasks
+    const { theme } = useContext(themeContext);
     const [tasks, dispatch] = useReducer(toDoReducer, []);
     const [filterOption, setFilterOption] = useState('All');
 
@@ -135,7 +138,7 @@ const ToDoList = () =>
     }
 
     return (
-        <div className='todo-list'>
+        <div className={classNames('todo-list', {dark: theme === 'dark'})}>
             <h1 className='text-primary'>TODO LIST</h1>
             <p>Lorem ipsum dolor</p>
 

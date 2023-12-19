@@ -9,6 +9,7 @@ import Counter from './components/Counter/Counter';
 import DisplayMovies from './components/Movies/DisplayMovies';
 import Users from './components/Users/Users';
 import User from './components/Users/User';
+import ThemeProvider from './providers/ThemeProvider';
 
 const router = createBrowserRouter
 (
@@ -50,7 +51,9 @@ const router = createBrowserRouter
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render
 (
-  <RouterProvider router={router}/>
+  <ThemeProvider>
+    <RouterProvider router={router}/>
+  </ThemeProvider>
   // <React.StrictMode>
     // <App />
   // </React.StrictMode>
